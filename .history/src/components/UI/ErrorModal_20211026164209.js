@@ -43,14 +43,14 @@ export const ErrorModal = (props) => {
 
     <React.Fragment>
       {ReactDOM.createPortal(
-        <Backdrop onHide={props.onHide} />,
+        <Backdrop onClick={props.onHide} />,
         document.getElementById("backdrop-root")
       )}
       {ReactDOM.createPortal(
         <ModalOverlay
           title={props.title}
           message={props.message}
-          onHide={props.onHide}
+          onClick={props.onHide}
         />,
         document.getElementById('overlay-root')
       )}
